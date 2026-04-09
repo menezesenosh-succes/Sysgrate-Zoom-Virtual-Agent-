@@ -13,26 +13,24 @@
     /* ── Reset & Variables ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-   :root {
-  --navy:    #162040;   /* main background */
-  --navy-2:  #1b2550;   /* section background */
-  --navy-3:  #101a35;   /* darker depth */
-  
-  --blue:    #3b82f6;   /* primary accent */
-  --blue-2:  #60a5fa;
-  
-  --cyan:    #38bdf8;   /* highlight glow */
-  --cyan-2:  #93c5fd;
-
-  --white:   #f8fafc;
-  --muted:   #94a3b8;
- --border: rgba(96,165,250,0.15);
-}
+    :root {
+      --navy:    #050d1a;
+      --navy-2:  #091428;
+      --navy-3:  #0e2044;
+      --blue:    #0e71eb;
+      --blue-2:  #2d8cff;
+      --cyan:    #00c2e0;
+      --cyan-2:  #6ee7f7;
+      --white:   #f0f6ff;
+      --muted:   #7a93b8;
+      --border:  rgba(46,140,255,.18);
+      --font:    'Inter', sans-serif;
+    }
 
     html { scroll-behavior: smooth; }
 
-     body {
-      background: linear-gradient(180deg, #162040 0%, #0f172a 100%);
+    body {
+      background: var(--navy);
       color: var(--white);
       font-family: var(--font);
       overflow-x: hidden;
@@ -85,10 +83,13 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ── Glass ─────────────────────────────────────────────────────────── */
-   .glass {
-  background: rgba(22,32,64,0.7);
-  backdrop-filter: blur(20px);
-}
+    .glass {
+      background: rgba(9,20,40,.72);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+      border-radius: 18px;
+    }
+
     /* ── Grid BG ───────────────────────────────────────────────────────── */
     .grid-bg {
       background-image:
@@ -100,7 +101,7 @@
     /* ── Buttons ───────────────────────────────────────────────────────── */
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
-      background: linear-gradient(135deg, #3b82f6, #38bdf8);
+      background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
       color: #fff; font-family: var(--font); font-weight: 700;
       font-size: 1rem; letter-spacing: .03em;
       padding: 14px 32px; border-radius: 50px; border: none; cursor: pointer;
@@ -236,11 +237,12 @@
       position: relative; overflow: hidden; padding-top: 100px;
     }
     .hero-mesh {
-  background:
-    radial-gradient(ellipse 80% 60% at 60% 40%, rgba(59,130,246,0.25) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 20% 80%, rgba(56,189,248,0.15) 0%, transparent 60%),
-    var(--navy);
-}
+      position: absolute; inset: 0; z-index: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 60% 40%, rgba(14,113,235,.22) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 50% at 20% 80%, rgba(0,194,224,.12) 0%, transparent 60%),
+        var(--navy);
+    }
     .hero-orb {
       position: absolute; top: 18%; right: 12%;
       width: 360px; height: 360px; border-radius: 50%;
