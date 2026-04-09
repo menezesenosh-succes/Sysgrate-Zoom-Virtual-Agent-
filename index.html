@@ -150,8 +150,21 @@ body{background:var(--black);color:var(--white);font-family:var(--font);overflow
   background:rgba(45,140,255,.08);border:1px solid rgba(45,140,255,.2);
   border-radius:50px;padding:6px 15px;margin-bottom:26px;
 }
-.hbdg-icon{width:26px;height:26px;border-radius:50%;overflow:hidden;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hbdg-icon img{width:22px;height:22px;object-fit:contain}
+.hbdg-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a56db, #0ea5e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(45,140,255,0.4);
+}
+
+.hbdg-icon img {
+  width: 30px;
+  height: 30px;
+}
 .hbdg span{font-size:.72rem;font-weight:700;letter-spacing:.08em;color:#60a5fa;text-transform:uppercase}
 .htitle{font-size:clamp(2.4rem,5vw,4.2rem);font-weight:900;line-height:1.07;letter-spacing:-.04em;margin-bottom:20px}
 .hsub{font-size:1.05rem;color:rgba(255,255,255,.58);line-height:1.75;max-width:490px;margin-bottom:34px}
